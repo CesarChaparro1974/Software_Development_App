@@ -14,10 +14,15 @@ The 2 files that contain the main data for the projects are:
 
 # launching the app
 To launch the project follow the next steps:
-1. Go to 
+1. Go to:   Local URL: http://localhost:8502
+            Network URL: http://192.168.1.249:8502 
 2. Once you are inside the app you can choose different parameters in order to purchase your car based on your preferences.
-3. Move the slider to the desired position or range in order to dislay the results based on your parameter.
+3. Move the slider to the desired position or range in order to dislay the results based on your odometer parameter.
 4. Since most of the cars are km. 0 on the data base, to simplify the action there is a clickbox that you can use to display only cars with km. 0.
+5. There is a side bar where you can select type of transmission you prefer to have on your car, by clicking on the option 'manual',         'automatic' or 'other', you can filter the list of models and their prices for each selection.
+By 'other' is meant that the transmission can be continuously variable, semi-automatic, etc.
 5. Based on your preferences, you can see various visualizations that display each category, or filter you made.
 6. In the bottom of the page you can see an outline of the recommended cars based on your paramters.
 7. Have a good shopping!
+
+--END OF FILE--
