@@ -5,6 +5,16 @@ The purpose of this project is to make an app to users can use it and interact w
 # link to GitHub repository
 https://github.com/CesarChaparro1974/webapppjt.git
 
+# if you want to launch the app on your local machine:
+Python libraries are saved in requirements.txt file.
+The information about the app's structure is saved on the app.py file which starts the Streamlit app.
+To execute the main python file to launch the Streamlit app, use Streamlit run command followed by the path to the main file (Streamlit run app.py).
+
+Prerequisites:
+- Python 3.x
+- Install dependencies: pip3 install -r requirements.txt
+- Run the app: Streamlit run app.py
+
 # libraries
 Libraries imported on this project:
 - pandas: To be used for data manipulation and analysis.
@@ -17,7 +27,7 @@ The 2 files that contain the main data for the projects are:
 1. EDA.ipynb file which contains the coding for importing the data set, processing the dataset and analysis steps with visualizations.
 2. app.py file which contains the code where the app is made. 
 
-# launching the app
+# launching the app outside the local machine:
 To launch the project follow the next steps:
 1. Go to: https://webapppjt.onrender.com/
 1a. On the right upper corner you will find settings for the app, I made a custom setting of the page that you can select by clickinig, **custom setting**. It will be dark blue background and different colors.
