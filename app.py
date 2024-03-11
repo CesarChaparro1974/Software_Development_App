@@ -19,7 +19,7 @@ new_df = df_filtered
 
 #header of the app page
 st.header('Car sales advertisements')
-st.subheader('Here you can choose the car you want to buy')
+st.subheader('Customize the car you want to buy')
 
 #image on the header
 img = Image.open('car_sold.jpg')
@@ -37,18 +37,21 @@ odometer_range = st.slider(
 actual_range = list(range(odometer_range[0], odometer_range[1]+1))
 
 #add a checkbox
-km_zero = st.checkbox('Only cars km. 0')
+only_gas = st.checkbox("Cars with gas", value=False)
 
-if km_zero:
-    filtered_data = new_df[new_df.odometer.isin(actual_range)]
-    filtered_data = filtered_data[new_df.odometer == 0]
+# filter DataFrame based on checkbox selection
+if only_gas:
+    df_filtered = df[df['fuel'] == 'gas']
 else:
-    filtered_data = new_df[new_df.odometer.isin(actual_range)]
+    df_filtered = df.copy()  # Copy to avoid modifying original DataFrame
+
+# Display DataFrame as a table
+st.table(df_filtered)
 
 st.write('Here you have your options with car condition and price')
 
 #add bar chart
-fig = px.bar(filtered_data, x="condition", y="price", color_discrete_sequence=["#6CCB11"])
+fig = px.bar(df_filtered, x="condition", y="price", color_discrete_sequence=["#6CCB11"])
 st.plotly_chart(fig)
 
 # Add a sidebar
@@ -74,7 +77,7 @@ st.divider()
 
 #add a histogram
 st.write('Distribution by odometer')
-fig2 = px.scatter(filtered_data, x='odometer', color_discrete_sequence=["#D4771D"])
+fig2 = px.scatter(df_filtered, x='odometer', color_discrete_sequence=["#D4771D"])
 st.plotly_chart(fig2)
 
 #add a divider
@@ -82,4 +85,4 @@ st.divider()
 
 #add a table with filtered recommended cars
 st.write('Here are my recommended cars')
-st.dataframe(filtered_data.sample(50))
+st.dataframe(df_filtered.sample(50))
