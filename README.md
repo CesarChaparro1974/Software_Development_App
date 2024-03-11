@@ -1,3 +1,19 @@
+Hello Yulia,
+Thank you for your amazing review and correction, I appreciate this.
+While I was fixing your corrections I found more little things and I did some other changes. Here is the outline:
+- Added all libraries to the top on a single module.
+- Added a title.
+- Added a summary and conclusions of the analysis.
+- Corrected the order of the columns when I cleaned the data, they were not in the correct order since 2 columns needed special handling to handle missing values.
+- Added some more detailed analysis on model_year and price columns.
+- Corrected the analysis on the odometer column.
+- On the app.py file I changed the clickbox feature since the results I found on the previous version were wrong. Maximum cars were not km.0.
+- I don't have questions at time time for you and i appreciate your review.
+Thank you.
+Cesar
+
+
+
 # webapppjt
 Hello, welcome to the project about car sells advertisements app.
 The purpose of this project is to make an app to users can use it and interact with it to decide what car they want to purchase according to their preferences.
