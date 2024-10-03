@@ -2,9 +2,6 @@
 Hello, welcome to the project about car sells advertisements app.
 The purpose of this project is to make an app to users can use it and interact with it to decide what car they want to purchase according to their preferences.
 
-# link to GitHub repository
-https://github.com/CesarChaparro1974/webapppjt.git
-
 # if you want to launch the app on your local machine:
 Python libraries are saved in requirements.txt file.
 The information about the app's structure is saved on the app.py file which starts the Streamlit app.
@@ -34,7 +31,7 @@ To launch the project follow the next steps:
 2. Once you are inside the app you can choose different parameters in order to purchase your car based on your preferences.
 3. Move the slider to the desired position or range in order to dislay the results based on your odometer parameter.
 4. Since most of the cars are 12.000 km on the data base, to simplify the action there is a clickbox that you can use to display only cars with those km.
-5. There is a side bar where you can select type of transmission you prefer to have on your car, by clicking on the option 'manual',         'automatic' or 'other', you can filter the list of models and their prices for each selection.
+5. There is a side bar where you can select type of transmission you prefer to have on your car, by clicking on the option 'manual', 'automatic' or 'other', you can filter the list of models and their prices for each selection.
 By 'other' is meant that the transmission can be continuously variable, semi-automatic, etc.
 5. Based on your preferences, you can see various visualizations that display each category, or filter you made.
 6. In the bottom of the page you can see an outline of the recommended cars based on your paramters.
