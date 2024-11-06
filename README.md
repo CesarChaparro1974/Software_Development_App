@@ -26,7 +26,7 @@ The 2 files that contain the main data for the projects are:
 
 # launching the app outside the local machine:
 To launch the project follow the next steps:
-1. Go to: https://webapppjt.onrender.com/
+1. Go to: http://0.0.0.0:10000/
 1a. On the right upper corner you will find settings for the app, I made a custom setting of the page that you can select by clickinig, **custom setting**. It will be dark blue background and different colors.
 2. Once you are inside the app you can choose different parameters in order to purchase your car based on your preferences.
 3. Move the slider to the desired position or range in order to dislay the results based on your odometer parameter.
