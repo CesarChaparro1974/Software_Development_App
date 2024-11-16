@@ -64,6 +64,11 @@ df_filtered = new_df[new_df['price'] != 1]
 # Create results DataFrame
 results_df = pd.DataFrame({'Model': new_df['model'], 'Price': new_df['price']})
 
+if 'price' in results_df.columns:
+    results_df['price'] = results_df['price'].astype(float)
+else:
+    st.error("The 'price' column is missing from the data.")
+
 # Now pass the DataFrame to Streamlit
 st.dataframe(results_df)
 
