@@ -11,7 +11,3 @@ port = 10000
 [browser]
 serverAddress = "0.0.0.0"
 serverPort = 10000
-[server]
-headless = true
-address = "0.0.0.0"  # Allow access from external IPs
-port = 8501  # Use the appropriate port
