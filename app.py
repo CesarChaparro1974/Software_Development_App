@@ -34,10 +34,10 @@ actual_range = list(range(odometer_range[0], odometer_range[1] + 1))
 # Add a checkbox for km filter
 km_filter = st.checkbox('Cars with 12.000 km')
 if km_filter:
-    filtered_data = new_df[new_df.odometer.isin(actual_range)]
-    filtered_data = filtered_data[new_df.odometer == 12000]
+    filtered_data = df[df.odometer.isin(actual_range)]
+    filtered_data = filtered_data[df.odometer == 12000]
 else:
-    filtered_data = new_df[new_df.odometer.isin(actual_range)]
+    filtered_data = df[df.odometer.isin(actual_range)]
 
 st.write('Here you have your options with car condition and price')
 
@@ -46,24 +46,24 @@ fig = px.bar(filtered_data, x="condition", y="price", color_discrete_sequence=["
 st.plotly_chart(fig)
 
 # Add a sidebar for selecting transmission
-transmission = new_df['transmission'].drop_duplicates()
+transmission = df['transmission'].drop_duplicates()
 choose = st.sidebar.selectbox('Select your vehicle:', transmission)
 
 # Filter data based on transmission selection
-new_df = new_df[new_df['transmission'] == choose]
-new_df = new_df.dropna(subset=['model'])
+new_df = df[df['transmission'] == choose]
+new_df = df.dropna(subset=['model'])
 
 # Ensure the 'price' column is numeric
-new_df['price'] = pd.to_numeric(new_df['price'], errors='coerce')
+df['price'] = pd.to_numeric(df['price'], errors='coerce')
 
 # Drop rows where 'price' is NaN
-new_df = new_df.dropna(subset=['price'])
+new_df = df.dropna(subset=['price'])
 
 # Filter price (excluding value 1 as per your code)
 df_filtered = new_df[new_df['price'] != 1]
 
 # Create results DataFrame with valid 'price' column
-results_df = pd.DataFrame({'Model': new_df['model'], 'Price': new_df['price']})
+results_df = pd.DataFrame({'Model': df['model'], 'Price': new_df['price']})
 
 # Display the results DataFrame in Streamlit
 st.dataframe(results_df)
