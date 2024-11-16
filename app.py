@@ -65,9 +65,6 @@ df_filtered = new_df[new_df['price'] != 1]
 # Create results DataFrame with valid 'price' column
 results_df = pd.DataFrame({'Model': df['model'], 'Price': new_df['price']})
 
-# Convert the 'price' column from int to string
-df['price'] = df['price'].astype(str)
-
 # Convert the 'days_listed' column from int to string
 df['days_listed'] = df['days_listed'].astype(str)
 
