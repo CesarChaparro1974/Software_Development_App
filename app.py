@@ -68,6 +68,11 @@ results_df = pd.DataFrame({'Model': df['model'], 'Price': new_df['price']})
 # Convert the 'days_listed' column from int to string
 df['days_listed'] = df['days_listed'].astype(str)
 
+# Ensure 'price' is numeric
+df['price'] = pd.to_numeric(df['price'], errors='coerce')  # Convert, coerce invalid values to NaN
+df = df.dropna(subset=['price'])  # Drop rows with NaN in 'price'
+df['price'] = df['price'].astype(int)  # Convert to integer explicitly
+
 # Display the DataFrame in Streamlit
 st.dataframe(df)
 
