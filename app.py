@@ -61,6 +61,13 @@ df_filtered = new_df[new_df['price'] != 1]
 # Create results DataFrame
 results_df = pd.DataFrame({'Model': new_df['model'], 'Price': new_df['price']})
 
+# Convert the 'Price' column to float
+results_df['price'] = results_df['price'].astype(float)
+
+# Now pass the DataFrame to Streamlit
+st.dataframe(results_df)
+
+
 st.write('List of cars from your transmission selection:')
 st.dataframe(results_df)
 
