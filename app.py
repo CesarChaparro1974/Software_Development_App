@@ -68,10 +68,11 @@ results_df = pd.DataFrame({'Model': df['model'], 'Price': new_df['price']})
 # Convert the 'price' column from int to string
 df['price'] = df['price'].astype(str)
 
-# Display the DataFrame in Streamlit
-import streamlit as st
-st.dataframe(df)
+# Convert the 'days_listed' column from int to string
+df['days_listed'] = df['days_listed'].astype(str)
 
+# Display the DataFrame in Streamlit
+st.dataframe(df)
 
 # Display the results DataFrame in Streamlit
 st.dataframe(results_df)
