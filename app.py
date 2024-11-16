@@ -58,16 +58,16 @@ new_df = new_df.dropna(subset=['model'])
 # Convert the 'Price' column to float
 new_df['price'] = new_df['price'].astype(float)
 
+if 'price' in new_df.columns:
+    new_df['price'] = new_df['price'].astype(float)
+else:
+    st.error("The 'price' column is missing from the data.")
+
 # Filter price within the filtered DataFrame
 df_filtered = new_df[new_df['price'] != 1]
 
 # Create results DataFrame
 results_df = pd.DataFrame({'Model': new_df['model'], 'Price': new_df['price']})
-
-if 'price' in results_df.columns:
-    results_df['price'] = results_df['price'].astype(float)
-else:
-    st.error("The 'price' column is missing from the data.")
 
 # Now pass the DataFrame to Streamlit
 st.dataframe(results_df)
