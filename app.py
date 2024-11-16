@@ -65,6 +65,14 @@ df_filtered = new_df[new_df['price'] != 1]
 # Create results DataFrame with valid 'price' column
 results_df = pd.DataFrame({'Model': df['model'], 'Price': new_df['price']})
 
+# Convert the 'price' column from int to string
+df['price'] = df['price'].astype(str)
+
+# Display the DataFrame in Streamlit
+import streamlit as st
+st.dataframe(df)
+
+
 # Display the results DataFrame in Streamlit
 st.dataframe(results_df)
 
